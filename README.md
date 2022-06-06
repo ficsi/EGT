@@ -10,6 +10,10 @@
 ### added pre-defined `.eslintrc` configuration
     - in case of errors returned needs to run `eslint --fix` to automatically fixes or check it manually
 
-### To start the project you need to run
+
+#### There is archive file because of the .* files
+
+##### To start the project you need to run
 - npm install
 - npm run start
+
