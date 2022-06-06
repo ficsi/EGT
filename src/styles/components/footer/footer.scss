@@ -1,0 +1,179 @@
+$parent: 'footer';
+
+#{$parent} {
+    .footer-top {
+        background: #f5f6fa;
+        width: 100%;
+
+        form {
+            height: 145px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                height: 100%;
+                padding: 40px 0 60px 0;
+            }
+
+            div {
+                width: 50%;
+                display: inline-flex;
+                justify-content: center;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    padding: 0 15px;
+                }
+            }
+
+            label {
+                width: 50%;
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 40px;
+                color: #414042;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    padding: 0 15px;
+                    margin: 0 0 50px 0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: #414042;
+                }
+            }
+
+            input {
+                max-width: 424px;
+                width: 100%;
+                outline: none;
+                border: none;
+                background: transparent;
+                border-bottom: 1px solid #c2c3c7;
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.005em;
+                text-align: left;
+            }
+
+            button {
+                cursor: pointer;
+                margin-left: 18px;
+                color: #fff;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 12px 26px;
+                gap: 10px;
+                background: #e12622;
+                border-radius: 0;
+            }
+        }
+    }
+
+    .footer-main {
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 120px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        span {
+            //display: inline-flex;
+            //flex-direction: column;
+            //justify-content: space-between;
+            @media (max-width: 768px) {
+                //display: inline-flex;
+                //flex-direction: revert;
+                //justify-content: inherit;
+            }
+        }
+
+        .title {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: #414042;
+            @media (max-width: 768px) {
+                cursor: pointer;
+                border-bottom: 1px solid #c2c3c7;
+                margin: 25px 20px 0 20px;
+                padding-bottom: 25px;
+            }
+
+            ul {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+                margin-top: 20px;
+
+                li {
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #414042;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        .dropdown {
+            background: url(#{$img-dir}/icons/arrow_h.svg) no-repeat right;
+            width: 8px;
+            height: 15px;
+            transform: rotate(90deg);
+            display: inline-block;
+            float: right;
+            @media (min-width: 769px) {
+                display: none;
+            }
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #c2c3c7;
+        display: inline-flex;
+        width: 100%;
+        padding-top: 20px;
+        margin-bottom: 400px;
+
+        .left,
+        .right {
+            display: inline-block;
+            width: 50%;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #414042;
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .--visible {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}

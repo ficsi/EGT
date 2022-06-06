@@ -1,0 +1,90 @@
+$parent: '.header-main';
+
+#{$parent} {
+    background: #fff;
+    height: 100px;
+    line-height: 100px;
+    @media (max-width: 768px) {
+        height: auto;
+        line-height: normal;
+    }
+    .wrapper {
+        text-align: center;
+    }
+
+    img {
+        margin-left: 15px;
+        vertical-align: middle;
+        float: left;
+        padding-top: 24px;
+        z-index: 999;
+        position: relative;
+    }
+
+    nav {
+        &.--visible {
+            .--mobile-menu {
+                display: block;
+            }
+        }
+        .--mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            display: none;
+
+            &.--visible {
+                display: block;
+            }
+        }
+        > ul {
+            margin: 0 auto;
+            @media (max-width: 768px) {
+                border: 1px solid red;
+                display: none;
+            }
+            li {
+                display: inline-block;
+                margin-right: 60px;
+
+                a {
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: #414042;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .utils {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @media (max-width: 768px) {
+            display: none;
+        }
+        .btn-login,
+        .btn-search {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+        }
+        .btn-login {
+            background: url(#{$img-dir}/icons/login.svg) no-repeat;
+            margin-right: 23px;
+        }
+        .btn-search {
+            background: url(#{$img-dir}/icons/search.svg) no-repeat;
+        }
+    }
+}

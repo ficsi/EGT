@@ -1,0 +1,79 @@
+$parent: '.header-top';
+
+#{$parent} {
+    background: #e12622;
+    width: 100%;
+    height: 29px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    .social,
+    .translate {
+        height: 100%;
+        vertical-align: middle;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 29px;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    .social {
+        float: left;
+
+        .menu {
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+
+            &.fb {
+                background: url(#{$img-dir}/icons/social/fb.svg) no-repeat center;
+            }
+
+            &.li {
+                background: url(#{$img-dir}/icons/social/li.svg) no-repeat center;
+            }
+
+            &.insta {
+                background: url(#{$img-dir}/icons/social/insta.svg) no-repeat center;
+            }
+
+            &.yt {
+                background: url(#{$img-dir}/icons/social/yt.svg) no-repeat center;
+            }
+        }
+    }
+
+    .translate {
+        float: right;
+        cursor: pointer;
+        padding-right: 15px;
+        .dropdown {
+            background: url(#{$img-dir}/icons/icon.png) no-repeat right;
+            width: 35px;
+            height: 15px;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            transform: translate(-50%, -50%);
+        }
+        ul {
+            display: none;
+            background: #e12622;
+            &.--visible {
+                display: block;
+            }
+        }
+    }
+}

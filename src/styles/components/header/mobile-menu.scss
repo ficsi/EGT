@@ -1,0 +1,108 @@
+$parent: '.--mobile';
+
+.btn-mobile_menu {
+    @media (min-width: 768px) {
+        display: none;
+    }
+    z-index: 999;
+    background: url(#{$img-dir}/icons/menu-open.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    &.--open {
+        background: url(#{$img-dir}/icons/close.svg) no-repeat;
+    }
+}
+
+#{$parent} {
+    &_shortcuts {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        &-menu {
+            background: #fff;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 80px;
+            height: 100%;
+
+            .--mobile {
+                background: #fff;
+                z-index: 999;
+                position: relative;
+
+                li {
+                    text-align: left;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: #414042;
+                    margin: 25px 0 25px 15px;
+
+                    &.utils {
+                        margin: 0;
+                        padding: 25px 0 25px 15px;
+                        float: none;
+                        width: 100%;
+                        border-top: 1px solid #eaeaea;
+                        position: revert;
+                        a {
+                            margin-right: 7px;
+
+                            &.active {
+                                font-family: 'Open Sans', sans-serif;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 18px;
+                                line-height: 24px;
+                                display: flex;
+                                align-items: center;
+                                color: #414042;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &_shortcuts {
+            display: inline-flex;
+            width: 100%;
+            align-items: center;
+            height: auto;
+            margin: 20px 0 0 20px;
+
+            li {
+                font-size: 12px;
+                &:after {
+                    content: '|';
+                    display: inline-block;
+                    padding: 0;
+                    margin: 0 5px;
+                }
+
+                &:last-child {
+                    &:after {
+                        content: '';
+                    }
+                }
+
+                a {
+                }
+            }
+        }
+    }
+}
